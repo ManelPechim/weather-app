@@ -65,7 +65,7 @@ const Index = () => {
   const requestWeather = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://api.weatherapi.com/v1/forecast.json?key=f8a24b09795a465681f225834241906&q=London&days=10&lang=pt");
+      const response = await axios.get("http://api.weatherapi.com/v1/forecast");
       setWeather(response.data);
     } catch (error) {
       console.error(error);
